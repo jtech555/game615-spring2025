@@ -15,4 +15,4 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 
 | Date | Topic | Code | Playable |
 | --- | --- | --- | --- |
-| 1-15-25 | Breakout - Unity Basics | [code]() | [play](./prototypes/breakout/) |
+| 1-15-25 | Breakout - Unity Basics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout) | [play](./prototypes/breakout/) |
