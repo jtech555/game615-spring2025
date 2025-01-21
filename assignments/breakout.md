@@ -17,10 +17,12 @@ In class, be prepared to:
 
 ## Submission
 
+Build your prototype for "Web" and save it as `breakout` inside of the `builds` folder.
+
 Your game should be playble online by going to the following link:
 
 ```
-http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/prototypes/breakout
+http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout
 ```
 
 If you need help getting your project on github, please refer to [these instructions](./setup.html). Most importantly, make sure to add the `.gitignore` file to your Unity project (if you are uploading your Unity project).

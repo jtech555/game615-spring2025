@@ -2,7 +2,7 @@
 
 ## Unity
 1. Download and install [Unity Hub](https://unity.com/download).
-1. Using Unity Hub, download and install Unity LTS Release 6000.0.32f1. 
+1. Using Unity Hub, download and install Unity LTS Release 6000.0.34f1. 
     - When prompted, be sure to include WebGL build support
     - **When asked, definitely choose to download and use Visual Studio Code!!!**
 
