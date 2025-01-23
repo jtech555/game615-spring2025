@@ -28,9 +28,9 @@ In class, be prepared to:
 
 <img src="./arkanoid.png" alt="Arkanoid NES gameplay" align="right" width="350">
 
-With a partner, create two more gameplay prototypes based on Breakout. As you consider your designs, strive to create gameplay that involves *something for the player to become good at* and a structure that gives the player the chance to learn to become skilled/good at playing your game.
+With a partner, create two more gameplay prototypes based on Breakout. As you consider your designs, strive to create gameplay that involves *something for the player to become good at* and a structure that gives the player the chance to learn to become skilled/good at playing your game. 
 
-This will require that you spend some time thinking about the specific challenges, powerups, and player controls. 
+Additionally, incorporate at least one element of `polish` (as described in Game Feel) in at least one of the prototypes.
 
 You may also consider creating series of small "levels" that introduce your game mechanic, and "train" a player to become skilled at playing your game (given the short amount of time, this may only be a couple of levels).
 
