@@ -1,6 +1,8 @@
 # Innovating with Breakout
 
-![Breakout 2600 box art](https://mtreanor.com/game615-spring2025/assignments/breakout.jpg "Breakout 2600 box art")
+<!-- ![Breakout 2600 box art](https://mtreanor.com/game615-spring2025/assignments/breakout.jpg "Breakout 2600 box art") -->
+
+<img src="./breakout.jpg" alt="Image description" align="right" width="200">
 
 ## breakout-1
 *DUE: 1-22-25*
