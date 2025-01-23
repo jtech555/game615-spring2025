@@ -9,7 +9,7 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | Assignment | Due |
 | --- | --- |
 | 0. [Environment setup](./assignments/setup.html) | 1-22-25 |
-| 1. [Breakout](./assignments/breakout.html) | 1-22-25 |
+| 1. [Breakout](./assignments/breakout.html#breakout-1) | 1-22-25 |
 
 ## Examples
 

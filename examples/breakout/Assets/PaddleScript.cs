@@ -11,8 +11,7 @@ public class PaddleScript : MonoBehaviour
         rb.maxLinearVelocity = maxSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float hAxis = Input.GetAxis("Horizontal");
         rb.AddForce(Vector3.right * hAxis * 1500 * Time.deltaTime);
@@ -23,7 +22,7 @@ public class PaddleScript : MonoBehaviour
         }
         else
         {
-            rb.linearDamping = maxSpeed;
+            rb.linearDamping = maxSpeed/6;
         }
     }
 }
