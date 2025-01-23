@@ -1,6 +1,9 @@
 # Innovating with Breakout
 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 ## breakout-1
+*DUE: 1-22-25*
 
 Create a small gameplay prototype based on Breakout.
 
@@ -18,6 +21,8 @@ In class, be prepared to:
 - share something interesting you learned about or used in order to make your prototype (share technical knowledge)
 
 ## breakout-2a and breakout-2b
+*DUE: 1-29-25*
+
 
 
 ## Submitting your prototypes
