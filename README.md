@@ -9,8 +9,10 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | Assignment | Due |
 | --- | --- |
 | 0. [Environment setup](./assignments/setup.html) | 1-22-25 |
-| 1. [Breakout 1](./assignments/breakout.html#breakout-1) | 1-22-25 |
-| 2. [Breakout 2a and 2b](./assignments/breakout.html#breakout-2a-and-2b) | 1-29-25 |
+| 1. [Breakout 1](https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-1) | 1-22-25 |
+| 2. [Breakout 2a and 2b](https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-2a-and-breakout-2b) | 1-29-25 |
+
+https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-2a-and-breakout-2b
 
 ## Examples
 
