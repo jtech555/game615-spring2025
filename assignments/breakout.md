@@ -1,6 +1,6 @@
 # Innovating with Breakout
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Breakout 2600 box art](https://mtreanor.com/game615-spring2025/assignments/breakout.jpg "Breakout 2600 box art")
 
 ## breakout-1
 *DUE: 1-22-25*
