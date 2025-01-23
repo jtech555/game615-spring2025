@@ -5,7 +5,7 @@
 ## breakout-1
 *DUE: 1-22-25*
 
-<img src="./breakout.jpg" alt="Breakout 2600 box art" align="right" width="400">
+<img src="./breakout.jpg" alt="Breakout 2600 box art" align="right" width="350">
 
 Create a small gameplay prototype based on Breakout.
 
@@ -26,7 +26,7 @@ In class, be prepared to:
 
 *DUE: 1-29-25*
 
-<img src="./arkanoid.png" alt="Arkanoid NES gameplay" align="right" width="400">
+<img src="./arkanoid.png" alt="Arkanoid NES gameplay" align="right" width="350">
 
 With a partner, create two more gameplay prototypes based on Breakout. As you consider your designs, strive to create gameplay that involves *something for the player to become good at* and a structure that gives the player the chance to learn to become skilled/good at playing your game.
 
