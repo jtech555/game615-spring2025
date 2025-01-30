@@ -11,9 +11,11 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 0. [Environment setup](./assignments/setup.html) | 1-22-25 |
 | 1. [Breakout 1](https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-1) | 1-22-25 |
 | 2. [Breakout 2a and 2b](https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-2a-and-breakout-2b) | 1-29-25 |
+| 3. [Breakout 3](https://mtreanor.com/game615-spring2025/assignments/breakout.html#breakout-3) | 2-5-24 |
 
 ## Examples
 
 | Date | Topic | Code | Playable |
 | --- | --- | --- | --- |
 | 1-15-25 | Breakout - Unity Basics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout) | [play](./prototypes/breakout/) |
+| 1-29-25 | Breakout - Custom Ball Physics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout/Assets/BallPhysics.cs) | [play](./prototypes/breakout-physics/) |

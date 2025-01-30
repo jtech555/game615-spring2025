@@ -36,6 +36,8 @@ Your prototypes should be playable online (see instructions below).
 
 ## breakout-3
 
+*DUE: 2-5-25*
+
 <img src="./images/hyperballoid.png" alt="Hyperballoid PS3 gameplay" align="right" width="350">
 
 Create, or refine, a prototype that can reliably entertain a player for **FIVE MINUTES** primarily through gameplay.
@@ -52,11 +54,11 @@ When designing your prototype, consider why people play games for a period of ti
 
 Keep in mind the following features as well:
 
-**Purposeful Action:** Players should be able to understand the game state enough to formulate a goal, and take steps to achieve it.
-**Sense of Responsibility:** Players should feel as though their failure or success to achieve their goals is the result of their decisions (at least partially)
-**Uncertainty:** The player should always wonder if they are going to be able to actually achieve their goals. This could be the result of skill, or even because of some random events (but too random is bad).
-**Require Skill:** There should be something to learn through playing your game. Is you are good at the game, what are you good at?
-**Progression:** The player should be presented with a series of challenges with increasing difficculty. This may be presented instantiated as levels that require the player to become better at using the core mechanic, but it could also be one level where making progress toward the goal requires learning how to better use the core mechanic.
+- **Purposeful Action:** Players should be able to understand the game state enough to formulate a goal, and take steps to achieve it.
+- **Sense of Responsibility:** Players should feel as though their failure or success to achieve their goals is the result of their decisions (at least partially).
+- **Uncertainty:** The player should always wonder if they are going to be able to actually achieve their goals. This could be the result of skill, or even because of some random events (but too random is bad).
+- **Require Skill:** There should be something to learn through playing your game. Is you are good at the game, what are you good at?
+- **Progression:** The player should be presented with a series of challenges with increasing difficculty. This may be presented instantiated as levels that require the player to become better at using the core mechanic, but it could also be one level where making progress toward the goal requires learning how to better use the core mechanic.
 
 This prototype should be more refined than the other ones. Try to make this **the** Breakout prototype that you remember making, or have people play, for years to come!
 
