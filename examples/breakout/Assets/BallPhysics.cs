@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// This component assumes that the game object using it has a RigidBody with all Constraints checked
+// i.e. x, y, z frozen for position and rotation.
+[RequireComponent(typeof(Rigidbody))]
 public class BallPhysics : MonoBehaviour
 {
     // Store the start position in Start. We'll use this to reset the start position when the ball
