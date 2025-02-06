@@ -52,10 +52,3 @@ if (velocity.y < 0 && transform.position.y > paddleObject.transform.position.y &
     localTimeScale = Mathf.Lerp(localTimeScale, normalTimeScale, Time.unscaledDeltaTime * transitionSpeed);
 }
 ```
-
-## Platformers
-
-All about jumping! Jump Man!
-
-- Donkey Kong
-- 
