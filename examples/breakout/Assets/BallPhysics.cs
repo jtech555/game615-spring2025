@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 // This component assumes that the game object using it has a RigidBody with all Constraints checked
@@ -5,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BallPhysics : MonoBehaviour
 {
+    public static Action BallHitPaddleAction;
+
     // Store the start position in Start. We'll use this to reset the start position when the ball
     // passes by the ball.
     Vector3 startPosition;
@@ -24,9 +27,13 @@ public class BallPhysics : MonoBehaviour
     // The value for this is assigned in the Unity editor (drag the main camera into the spot in the inspector)
     [SerializeField]
     Camera cam;
+    [SerializeField]
+    GameObject paddleObject;
 
     // This is the value of gravity (what happens if we change this?)
     Vector3 gravity = new Vector3(0, -9.8f, 0);
+
+    float localTimeScale = 1;
 
 
     // These controls affect the way that the ball reflects off of the paddle
@@ -82,7 +89,7 @@ public class BallPhysics : MonoBehaviour
         Debug.DrawRay(transform.position, acceleration/5, Color.green);
         
         // Add the acceleration (scaled by Time.deltaTime) to the velocity.
-        velocity += acceleration * Time.deltaTime;
+        velocity += acceleration * Time.deltaTime * localTimeScale;
 
         // Prevent the velocity from getting too fast. This will maintain the direction, but cap the
         // magnitude of the vector at 10.
@@ -93,7 +100,7 @@ public class BallPhysics : MonoBehaviour
 
         // Finally, actually move the object by adding the velocity vector (scaled by Time.deltaTime)
         // to the position.
-        transform.position += velocity * Time.deltaTime;
+        transform.position += velocity * Time.deltaTime * localTimeScale;
 
         // Check to see if we went past the paddle
         if (transform.position.y < -5) {
@@ -103,6 +110,14 @@ public class BallPhysics : MonoBehaviour
         }
 
         previousVelocity = velocity;
+
+        // Slow down the time of the ball if it is close to the paddle
+        float distanceToPaddle = Vector3.Distance(transform.position, paddleObject.transform.position);
+        if (transform.position.y > paddleObject.transform.position.y && velocity.y < 0 && distanceToPaddle < 3) {
+            localTimeScale = 0.1f;
+        } else {
+            localTimeScale = 1f; // If we aren't close to the ball, reset the time scale to 1 (no effect)
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -110,6 +125,9 @@ public class BallPhysics : MonoBehaviour
         ContactPoint cp = collision.GetContact(0);
         if (collision.gameObject.CompareTag("paddle")) 
         {
+            // Broadcast message
+            BallHitPaddleAction?.Invoke();  
+
             // This is my personal (not necessarily the best or most straight forward) implementation
             // of having control over the ball's reflection when it collides with the ball.
             Vector3 paddlePos = collision.gameObject.transform.position;

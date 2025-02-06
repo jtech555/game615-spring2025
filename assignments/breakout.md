@@ -64,9 +64,15 @@ This prototype should be more refined than the other ones. Try to make this **th
 
 Your prototype should be playable online (see instructions below).
 
-## Submitting your prototypes
+## Reflection and Your Best Breakout Prototype
 
-Build your prototype for "Web" and save the build in a folder named for each prototype: `breakout-1`, `breakout-2a`, `breakout-2b`, `breakout-3`.
+Reflect on your experience creating prototypes inspired by Breakout. 
+
+Your write up should be written as a `README.md` file written in the [markdown format](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet). 
+
+# Submitting your prototypes
+
+Build your prototype for "Web" and save the build in a folder named for each prototype: `breakout-1`, `breakout-2a`, `breakout-2b`, `breakout-3`, and `breakout-best`.
 
 Your prototypes should be playble online by going to the following links:
 
@@ -75,6 +81,7 @@ http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout-1
 http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout-2a
 http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout-2b
 http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout-3
+http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/breakout-best
 ```
 
 If you need help getting your project on github, please refer to [these instructions](./setup.html). Most importantly, make sure to add the `.gitignore` file to your Unity project (if you are uploading your Unity project).

@@ -23,3 +23,17 @@ Create FIVE MINUTES of gameplay-based entertainment
 Questions: Describe some "optimal" gameplay scenarios. 
 
 Example, Alleyway, Arkanoid
+
+
+
+
+Hi all,
+
+Please see the class website for an annotated and enhanced example of implementing custom ball physics, as well as the assignment for next week "breakout-3". Be sure to check out the BallPhysics.cs file and read the comments.
+
+https://mtreanor.com/game615-spring2025/
+
+Let me know if you have any questions or want to meet for office hours. You can just show up on Monday in person, or if you want zoom let me know.
+
+Best,
+Mike
