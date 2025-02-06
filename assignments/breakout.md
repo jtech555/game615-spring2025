@@ -38,7 +38,7 @@ Your prototypes should be playable online (see instructions below).
 
 *DUE: 2-5-25*
 
-<img src="./images/hyperballoid.png" alt="Hyperballoid PS3 gameplay" align="right" width="350">
+<img src="./images/hyperballoid.png" alt="Hyperballoid PS3 gameplay" align="right" width="450">
 
 Create, or refine, a prototype that can reliably entertain a player for **FIVE MINUTES** primarily through gameplay.
 
@@ -65,6 +65,8 @@ This prototype should be more refined than the other ones. Try to make this **th
 Your prototype should be playable online (see instructions below).
 
 ## Final Prototype
+
+<img src="./images/breakout-beyond.png" alt="Hyperballoid PS3 gameplay" align="right" width="475">
 
 Create one more version of Breakout based on one of your previous prototypes. Rather than adding a lot of extra features, try to make the best part of your prototype better. Are there refinements you can make to create better 'game feel'? Can you add some visual effects to increase the players investment in playing the game? Challenge yourself to think small rather than big.
 
