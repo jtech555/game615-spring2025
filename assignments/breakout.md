@@ -68,7 +68,7 @@ Your prototype should be playable online (see instructions below).
 
 <img src="./images/breakout-beyond.png" alt="Hyperballoid PS3 gameplay" align="right" width="475">
 
-Create one more version of Breakout based on one of your previous prototypes. Rather than adding a lot of extra features, try to make the best part of your prototype better. Are there refinements you can make to create better 'game feel'? Can you add some visual effects to increase the players investment in playing the game? Challenge yourself to think small rather than big.
+Create one more version of Breakout based on one of your previous prototypes. Rather than adding a lot of extra features, try to make the best part of your prototype even better. Are there refinements you can make to create better 'game feel'? Can you add some visual effects to increase the players investment in playing the game? Keep the what is written above for the `breakout-3` assignment. Challenge yourself to think small rather than big.
 
 Your prototype should be playable online (see instructions below).
 
@@ -82,12 +82,18 @@ Reflect on your experience creating 4 or 5 prototypes inspired by Breakout. For 
 - Include an image of the game (example below)
 - Include a link to your game
 
-Your write up should be written as a `README.md` file written in the [markdown format](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet). 
+Your write up should be written in a file named `README.md` in the [markdown format](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet). The README.md should be placed in the following directory of your repository: `game-dev-spring2025/prototypes/breakout`.
+
+If you did everything right, you should see your markdown file rendered as a basic website when you go the following link:
+
+```
+https://github.com/<YOUR_GITHUB_USERNAME>/game-dev-spring2025/tree/main/prototypes/breakout
+```
 
 Link markdown example: 
 `[Play Breakout Prototype 1](https://github.com/mtreanor/game615-spring2025/blob/main/prototypes/breakout-physics)`
 
-Image markdown example: 
+Image markdown example (assuming you have a folder named images in the same folder as the reflection README.md file): 
 `<img src="./images/breakout.png" alt="Breakout gameplay" align="right" width="350">`
 
 # Submitting your prototypes
