@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public CharacterController cc;         // Reference to CharacterController
 
+    [SerializeField]
+    Camera cam;
+
+
+    [SerializeField]
+    AnimationCurve jumpForceCurve;
+
     private Vector3 velocity;              // Current velocity (includes all forces)
     private Vector3 acceleration;          // Accumulated forces (gravity, movement, friction)
     
@@ -20,19 +28,27 @@ public class PlayerController : MonoBehaviour
         float vAxis = Input.GetAxis("Vertical");
 
         // Rotate character based on input
-        transform.Rotate(0, hAxis * 60 * Time.deltaTime, 0);
+        // transform.Rotate(0, hAxis * 60 * Time.deltaTime, 0);
 
         // Gravity handling (always apply gravity, even if grounded)
         acceleration = new Vector3(0, -9.81f, 0);
 
+        // Apply movement input (forward/backward movement)
+        Vector3 cameraForward = cam.gameObject.transform.forward;
+        cameraForward.y = 0;
+        cameraForward.Normalize();
+        acceleration += cameraForward * vAxis * moveSpeed;
+
+        Vector3 cameraRight = cam.gameObject.transform.right;
+        cameraRight.y = 0;
+        cameraRight.Normalize();
+        acceleration += cameraRight * hAxis * moveSpeed;
+
+        // Apply friction as an acceleration (opposite direction of horizontal velocity)
+        ApplyFriction();
+
         if (cc.isGrounded)
         {
-            // Apply friction as an acceleration (opposite direction of horizontal velocity)
-            ApplyFriction();
-
-            // Apply movement input (forward/backward movement)
-            acceleration += transform.forward * vAxis * moveSpeed;
-
             // Handle jump (apply upward force if jumping)
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -58,6 +74,12 @@ public class PlayerController : MonoBehaviour
 
         // Move the character
         cc.Move(velocity * Time.deltaTime);
+
+        // Debug.Log((velocity * Time.deltaTime).magnitude);
+        if (cc.velocity.sqrMagnitude > 0.01f) {
+            Vector3 direction = new Vector3(velocity.x, 0, velocity.z);
+            transform.forward = direction.normalized;
+        }
 
         // Reset acceleration for the next frame (don't carry over from previous frame)
         acceleration = Vector3.zero;
