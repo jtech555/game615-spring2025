@@ -10,7 +10,9 @@
     </picture>
 </p>
 
-Before we begin prototyping platformer mechanics, spend some time analyzing the differences between **4 platformer games** (2d or 3d). For each game, address the following points:
+Before we begin prototyping platformer mechanics, spend some time analyzing the differences between **3 platformer games** made before 1995. To find games, use google, but if you have trouble, choose from popular franchises like Super Mario or Sonic the Hedgehog. If you can play the games yourself, that is best, but if you don't have access, look on youtube search for the game's title and 'longplay' (e.g. "Mega Man X longplay").
+
+For each game, address the following points:
 
 - Describe the movement on the ground (pay attention to the details)
 - Describe the jump (again, be detail oriented)
