@@ -10,7 +10,7 @@
     </picture>
 </p>
 
-Before we begin prototyping platformer mechanics, spend some time analyzing the differences between **3 platformer games** made before 1995. To find games, use google, but if you have trouble, choose from popular franchises like Super Mario or Sonic the Hedgehog. If you can play the games yourself, that is best, but if you don't have access, look on youtube search for the game's title and 'longplay' (e.g. "Mega Man X longplay").
+Before we begin prototyping platformer mechanics, spend some time analyzing the differences between **3 platformer games** made before 1995. To find games, use google or whatever, but if you have trouble, choose from popular franchises like Super Mario or Sonic the Hedgehog. If you can play the games yourself, that is best, but if you don't have access, look on youtube search for the game's title and 'longplay' (e.g. "Mega Man X longplay").
 
 For each game, address the following points:
 
