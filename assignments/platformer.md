@@ -26,3 +26,19 @@ Come to class prepared to discuss your analysis to the class. Your analysis shou
 ```
 https://github.com/<YOUR_GITHUB_USERNAME>/game-dev-spring2025/tree/main/prototypes/platformer/analysis.md
 ```
+
+## Platformer Controls - Round 1
+
+<img src="./images/platformer-prototype-1.png" alt="Platformer prototype in Unity" align="right" width="400">
+
+*Due: 2-26-25*
+
+Create a 2d or 3d platformer prototype that implements features [from this list](https://docs.google.com/spreadsheets/d/1RUum3ofbaDgzheoHGNz9Vk3W7qummd1S33_1BpcjhP4/edit?usp=sharing). Each item on the list has a suggested *"Implementation Difficulty Score"*. Make sure whatever you create adds up to a total of 3. Note that there is no score for basic platforming (moving and jumping).
+
+Your prototype should have a small level that demonstrates the mechanics you implemented. Remember to primarily focus on your game mechanics (and not the visuals or effects).
+
+Your game should be playable at the following link:
+
+```
+http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-1
+```

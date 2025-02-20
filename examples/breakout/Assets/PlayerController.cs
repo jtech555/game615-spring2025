@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 20f;          // Movement speed when pressing forward/backward
-    public float frictionCoefficient = 5f; // Strength of friction when grounded
+    public float moveSpeed = 30f;          // Movement speed when pressing directional buttons
+    public float drag = 0.99f;
+    public float normalFrictionCoefficient = 5f; // Strength of friction when grounded
     public float maxSpeed = 15f;           // Maximum velocity the character can reach
     public float maxForce = 25f;           // Maximum total acceleration applied
     public float jumpForce = 8f;           // Force applied for jumping
+
+    private float lastGroundedTime = 0f;  // Time when the player was last grounded
+    public float coyoteTimeDuration = 2f; // Time window for coyote jump
+
     [SerializeField]
     public CharacterController cc;         // Reference to CharacterController
 
@@ -33,7 +38,7 @@ public class PlayerController : MonoBehaviour
         // Gravity handling (always apply gravity, even if grounded)
         acceleration = new Vector3(0, -9.81f, 0);
 
-        // Apply movement input (forward/backward movement)
+        // Apply movement based on the input and camera direction
         Vector3 cameraForward = cam.gameObject.transform.forward;
         cameraForward.y = 0;
         cameraForward.Normalize();
@@ -45,21 +50,39 @@ public class PlayerController : MonoBehaviour
         acceleration += cameraRight * hAxis * moveSpeed;
 
         // Apply friction as an acceleration (opposite direction of horizontal velocity)
-        ApplyFriction();
+        if (hAxis == 0 && vAxis == 0) {
+            ApplyFriction(normalFrictionCoefficient);
+        }
 
+
+        bool isWallSliding = false;
+        Vector3 wallNormal = Vector3.zero;
+        if (!cc.isGrounded)
+        {
+            if (IsTouchingWall(out wallNormal))
+            {
+                isWallSliding = true;
+                velocity.y = Mathf.Max(velocity.y, -2f); // Limit downward speed on walls
+            }
+        }
+
+        // Track when the player was last on the ground
         if (cc.isGrounded)
         {
-            // Handle jump (apply upward force if jumping)
+            lastGroundedTime = Time.time; // Update last grounded time
+        }
+        bool canJump = (cc.isGrounded || Time.time - lastGroundedTime < coyoteTimeDuration);
+        if (canJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            velocity.y = jumpForce;
+            lastGroundedTime = 0f; // Reset coyote time after jumping
+        }
+
+        if (isWallSliding)
+        {   
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                velocity.y = jumpForce;
-            }
-        } 
-        else 
-        {
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                velocity.y = 0;
+                velocity = wallNormal * 10f + Vector3.up * jumpForce; // Push off the wall
             }
         }
 
@@ -75,28 +98,51 @@ public class PlayerController : MonoBehaviour
         // Move the character
         cc.Move(velocity * Time.deltaTime);
 
-        // Debug.Log((velocity * Time.deltaTime).magnitude);
-        if (cc.velocity.sqrMagnitude > 0.01f) {
-            Vector3 direction = new Vector3(velocity.x, 0, velocity.z);
-            transform.forward = direction.normalized;
+        Vector3 horizontalVelocity = new Vector3(velocity.x, 0, velocity.z);
+        if (horizontalVelocity.magnitude > 0.1f) {
+            transform.forward = horizontalVelocity.normalized;
         }
 
         // Reset acceleration for the next frame (don't carry over from previous frame)
         acceleration = Vector3.zero;
     }
 
-    void ApplyFriction()
+    void ApplyFriction(float frictionCoefficient)
     {
-        // Calculate horizontal velocity (ignore the vertical component)
         Vector3 horizontalVelocity = new Vector3(velocity.x, 0, velocity.z);
 
-        if (horizontalVelocity.magnitude > 0) // Only apply friction if there's horizontal velocity
+        if (horizontalVelocity.magnitude > 0.01f) // Only apply friction if there's movement
         {
-            // Friction acceleration is the opposite direction of velocity
-            Vector3 frictionAcceleration = -horizontalVelocity.normalized * frictionCoefficient;
+            // Friction force: proportional to velocity, clamped to avoid oscillation
+            float frictionForce = frictionCoefficient * Time.deltaTime;
+            Vector3 friction = horizontalVelocity.normalized * frictionForce;
 
-            // Add the friction force as part of the total acceleration
-            acceleration += frictionAcceleration;
+            // Prevent overshooting (stop completely if friction would reverse velocity)
+            if (friction.magnitude > horizontalVelocity.magnitude)
+            {
+                velocity.x = 0;
+                velocity.z = 0;
+            }
+            else
+            {
+                velocity -= friction;
+            }
         }
+    }
+
+    bool IsTouchingWall(out Vector3 wallNormal)
+    {
+        RaycastHit hit;
+        float wallCheckDistance = 0.6f;
+        wallNormal = Vector3.zero;
+        LayerMask mask = LayerMask.GetMask("wall");
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, wallCheckDistance, mask))
+        {
+            wallNormal = hit.normal;
+            return true;
+        }
+
+        return false;
     }
 }

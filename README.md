@@ -17,6 +17,7 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 1.4. [Final Breakout Prototype](https://mtreanor.com/game615-spring2025/assignments/breakout.html#final-prototype) | 2-12-24 |
 | 1.5. [Reflection](https://mtreanor.com/game615-spring2025/assignments/breakout.html#reflection) | 2-12-24 |
 | 2.1. [Platformer Analysis](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-analysis) | 2-19-24 |
+| 2.2. [Platformer Controls - Round 1](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-controls-round-1) | 2-26-24 |
 
 ## Examples
 
@@ -25,3 +26,4 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 1-15-25 | Breakout - Unity Basics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout/Assets/BallScriptRB.cs) | [play](./prototypes/breakout/) |
 | 1-29-25 | Breakout - Custom Ball Physics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout/Assets/BallPhysics.cs) | [play](./prototypes/breakout-physics/) |
 | 2-5-25 | Breakout - Scaling time per object, trail renderer (with bloom), screen shake (with observer pattern / coroutines)  | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/breakout/Assets/BallPhysics.cs) | [play](./prototypes/breakout-effects/) |
+| 2-19-25 | A Basic 2D Platformer with Custom Physics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/platformer/Assets/PlatformerPlayerController.cs) | [play](./prototypes/platformer-1/) |

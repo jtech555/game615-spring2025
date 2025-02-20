@@ -602,10 +602,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  frictionCoefficient: 5
+  drag: 0.7
+  normalFrictionCoefficient: 5
   maxSpeed: 20
   maxForce: 25
   jumpForce: 8
+  coyoteTimeDuration: 2
   cc: {fileID: 993463698}
   cam: {fileID: 961739752}
   jumpForceCurve:
@@ -695,8 +697,8 @@ GameObject:
   - component: {fileID: 1079592465}
   - component: {fileID: 1079592464}
   - component: {fileID: 1079592463}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Wall
   m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
