@@ -29,11 +29,11 @@ https://github.com/<YOUR_GITHUB_USERNAME>/game-dev-spring2025/tree/main/prototyp
 
 ## Platformer Controls - Round 1
 
-<img src="./images/platformer-prototype-1.png" alt="Platformer prototype in Unity" align="right" width="400">
+<img src="./images/platformer-prototype-1.png" alt="Platformer prototype in Unity" align="right" width="350">
 
 *Due: 2-26-25*
 
-Create a 2d or 3d platformer prototype that implements features [from this list](https://docs.google.com/spreadsheets/d/1RUum3ofbaDgzheoHGNz9Vk3W7qummd1S33_1BpcjhP4/edit?usp=sharing). Each item on the list has a suggested *"Implementation Difficulty Score"*. Make sure whatever you create adds up to a total of 3. Note that there is no score for basic platforming (moving and jumping).
+Create a 2d or 3d platformer prototype that implements features [from this list](https://docs.google.com/spreadsheets/d/1RUum3ofbaDgzheoHGNz9Vk3W7qummd1S33_1BpcjhP4/edit?usp=sharing). Each item on the list has a suggested *"Implementation Difficulty Score"*. Make sure whatever you create adds up to a total of 3. Note that there is no score for basic platforming (moving and jumping). Feel free to start from this [code example](https://github.com/mtreanor/game615-spring2025/tree/main/examples/platformer/Assets/PlatformerPlayerController.cs).
 
 Your prototype should have a small level that demonstrates the mechanics you implemented. Remember to primarily focus on your game mechanics (and not the visuals or effects).
 

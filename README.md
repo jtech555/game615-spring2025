@@ -17,7 +17,7 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 1.4. [Final Breakout Prototype](https://mtreanor.com/game615-spring2025/assignments/breakout.html#final-prototype) | 2-12-24 |
 | 1.5. [Reflection](https://mtreanor.com/game615-spring2025/assignments/breakout.html#reflection) | 2-12-24 |
 | 2.1. [Platformer Analysis](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-analysis) | 2-19-24 |
-| 2.2. [Platformer Controls - Round 1](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-controls-round-1) | 2-26-24 |
+| 2.2. [Platformer Controls - Round 1](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-controls---round-1) | 2-26-24 |
 
 ## Examples
 
