@@ -1,0 +1,2194 @@
+{
+      "microtheories": [
+            {
+                  "type": "kind",
+                  "rules": [
+                        {
+                              "name": "Family members are kind to one another",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "family",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Coworkers are a little kind to one another",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "coworker",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are much more kind to people they are dating",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People aren't kind to people they are not friendly with",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are kind to people they have high friendly feelings for",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are less kind to those they are unattracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are a very kind to those they are very attracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are less kind to people they don't respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are kind to those they respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Loyal people are kind",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "loyal",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Friendly people are kind",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "friendly",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Shy people are less kind",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "shy",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Jerks are much less likely to be kind",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "jerk",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are much less kind when they are hangry",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "hangry",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Fans of the restaurant are kind because they are in a good mood at the restaurant",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "fan_of_restaurant",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are nice to those who have been nice to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_nice_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are less kind to those who have been rude to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_rude_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "People are a little kind to those who have flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Employees on break want to be left alone",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "on_break",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": false,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": -6,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        },
+                        {
+                              "name": "Bosses are kind to their punctual employees",
+                              "conditions": [
+                                    {
+                                          "class": "directedStatus",
+                                          "type": "boss_of",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "punctual",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "kind",
+                                          "weight": 10,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "kind"
+                        }
+                  ]
+            },
+            {
+                  "type": "rude",
+                  "rules": [
+                        {
+                              "name": "People are less rude to their family",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "family",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are a little less rude to their coworkers",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "coworker",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are less rude to people they are dating",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are more rude to people they are dating but unattracted to",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are a little more rude to people they don't feel friendly with",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are much less rude to they that they have friendly feelings towards",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are a little more rude to those they are unattracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are much less rude to those that they are attracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are much more rude to those that they don't respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are less rude to people they respect a lot",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Loyal people are less rude",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "loyal",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Friendly people don't want to be rude",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "friendly",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Shy people are less rude",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "shy",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Jerks are very rude",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "jerk",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Hangry people are very rude",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "hangry",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Employees are more rude to non-employees when they are on break",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "on_break",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": false,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "Fans of the restaurant are less rude",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "fan_of_restaurant",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are less rude to those who have been nice to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_nice_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are more rude to those who have been rude to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_rude_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are less rude to those who have flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are much more rude to those that they aren't attracted to if they have flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are more rude to those they are unattracted to who have ever flirted with them ever",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                0
+                                          ]
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are much less rude to those who they are attracted to if they flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": -5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        },
+                        {
+                              "name": "People are more rude to those who have embarrassed themself in front of them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "embarrassed_self",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "rude",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "rude"
+                        }
+                  ]
+            },
+            {
+                  "type": "flirt",
+                  "rules": [
+                        {
+                              "name": "People don't flirt with their family",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "family",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -999,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People are more inclined in general to flirt with their coworkers",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "coworker",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 3
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 8
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People are more inclined in general to flirt with their coworkers even if they aren't attracted to them",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "coworker",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People are much more flirty with people they are dating",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People flirt less with people they don't have friendly feeling towards",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Friend zone. People flirt less with people they have a lot of friendly feeling towards as long as they aren't dating",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    },
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": false,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People don't flirt with people they are unattracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People want to flirt a little by default",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 3
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 8
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People are flirty with people they are attracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 5,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People don't want to flirt with people they don't respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People flirt less with people they respect a lot",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Friendly people are a little flirty",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "friendly",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Shy people are less flirty",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "shy",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Employees are less flirty with non-employees",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": false,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Hangry people are less flirty",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "hangry",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Employees are flirty with one another when on break",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "on_break",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "Bosses are less flirty with their employees",
+                              "conditions": [
+                                    {
+                                          "class": "directedStatus",
+                                          "type": "boss_of",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People want to flirt with people who were nice to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_nice_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People don't want to flirt with people who were rude to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_rude_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People want to flirt with people who flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        },
+                        {
+                              "name": "People don't want to flirt with people who have embarrassed themself recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "embarrassed_self",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "z",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "anyone",
+                                          "value": true,
+                                          "first": "z"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "flirt",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "flirt"
+                        }
+                  ]
+            },
+            {
+                  "type": "impress",
+                  "rules": [
+                        {
+                              "name": "People worry less about impressing their family",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "family",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People want to impress their coworkers a little",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "coworker",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People want to impress people they are dating",
+                              "conditions": [
+                                    {
+                                          "class": "relationship",
+                                          "type": "dating",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People don't want to impress people they don't have friendly feeling towards",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People want to impress people they have very friendly feeling towards",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "friend",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People very much want to impress people they are attracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 6,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People want to impress people they are a little attracted to",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 3
+                                    },
+                                    {
+                                          "class": "network",
+                                          "type": "attraction",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 8
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People very much want to impress people they respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": ">",
+                                          "value": 7
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 6,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People don't want to impress people they don't respect",
+                              "conditions": [
+                                    {
+                                          "class": "network",
+                                          "type": "respect",
+                                          "first": "x",
+                                          "second": "y",
+                                          "operator": "<",
+                                          "value": 4
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Shy people want to impress people",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "shy",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "A loyal employee wants to impress people",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "loyal",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 4,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Employees generally don't care about impressing people",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Jerks don't want to impress people",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "jerk",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Hangry people don't have time to impress people",
+                              "conditions": [
+                                    {
+                                          "class": "status",
+                                          "type": "hangry",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Employees want to impress their boss",
+                              "conditions": [
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "x"
+                                    },
+                                    {
+                                          "class": "directedStatus",
+                                          "type": "boss_of",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 6,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "Bosses care a lot about impressing their employees",
+                              "conditions": [
+                                    {
+                                          "class": "directedStatus",
+                                          "type": "boss_of",
+                                          "value": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "employee",
+                                          "value": true,
+                                          "first": "y"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 7,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People don't want to impress people who have been rude to them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "was_rude_to",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -1,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People want to impress people who have flirted with them recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "flirted_with",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "x",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": 2,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        },
+                        {
+                              "name": "People don't want to impress people who have embarrassed themselves recently",
+                              "conditions": [
+                                    {
+                                          "class": "history",
+                                          "type": "embarrassed_self",
+                                          "value": true,
+                                          "first": "y",
+                                          "second": "z",
+                                          "turnsAgoBetween": [
+                                                0,
+                                                8
+                                          ]
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "anyone",
+                                          "value": true,
+                                          "first": "z"
+                                    },
+                                    {
+                                          "class": "trait",
+                                          "type": "anyone",
+                                          "value": true,
+                                          "first": "x"
+                                    }
+                              ],
+                              "effects": [
+                                    {
+                                          "class": "intent",
+                                          "type": "impress",
+                                          "weight": -3,
+                                          "intentDirection": true,
+                                          "first": "x",
+                                          "second": "y"
+                                    }
+                              ],
+                              "type": "impress"
+                        }
+                  ]
+            }
+      ]
+}

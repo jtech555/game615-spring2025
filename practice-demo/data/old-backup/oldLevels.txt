@@ -1,0 +1,26 @@
+
+{	
+	"levels": [
+		{
+			"levelName" : "levelOne",
+			"levelCast" : ["Celes", "Sabin"],
+			"goals": [
+				{
+					"first": "X",
+					"second": "Y",
+					"category" : "relationship",
+					"type" : "coworker"
+				},
+				{
+					"first": "X",
+					"second": "Y",
+					"category" : "relationship",
+					"type" : "friend"
+				}
+			],
+			"bindings": {
+				"X" : "Kefka"
+			}
+		}
+	]
+}

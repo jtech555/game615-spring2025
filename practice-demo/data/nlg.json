@@ -1,0 +1,129 @@
+{
+    "nlg": {
+        "intent": {
+            "kind": {
+                "-999": "%x% refuses to be kind to %y%",
+                "-4": "%x% ",
+                "-1": "",
+                "0":"",
+                "1": "",
+                "4": "",
+                "999": ""
+            }
+        },
+        "relationship": {
+            "family": {
+                "true": "%x% and %y% are family members",
+                "false": "%x% and %y% aren't family members"
+            },
+            "coworker": {
+                "true": "%x% and %y% are coworkers",
+                "false": "%x% and %y% aren't coworkers"
+            },
+            "dating": {
+                "true": "%x% and %y% are dating",
+                "false": "%x% and %y% are not dating"
+            },
+            "met": {
+                "true": "%x% and %y% have met",
+                "false": "%x% and %y% haven't met"
+            },
+            "dining_partner": {
+                "true": "%x% and %y% are currently dining together",
+                "false": "%x% and %y% are not dining together"
+            }
+        },
+        "network": {
+            "friend": {
+                "0": "%x% feels unfriendly towards %y%",
+                "2": "%x% doesn't feel very friendly towards %y%",
+                "4": "%x% has average friendly feelings towards %y%",
+                "8": "%x% feels very friendly towards %y%"
+            },
+            "attraction": {
+                "0": "%x% isn't attracted to %y% at all",
+                "2": "%x% isn't very attracted to %y%",
+                "4": "%x% has average attraction for %y%",
+                "8": "%x% is very attracted to %y%"
+            },
+            "respect": {
+                "0": "%x% has no respect for %y%",
+                "2": "%x% has little respect for %y%",
+                "5": "%x% has average levels of respect for %y%",
+                "8": "%x% respects %y% a lot"
+            }
+        },
+        "trait": {
+            "loyal": {
+                "true": "%x% is a loyal person",
+                "false": "%x% isn't a loyal person"
+            },
+            "friendly": {
+                "true": "%x% is a generally friendly person",
+                "false": "%x% isn't a friendly person"
+            },
+            "employee": {
+                "true": "%x% is an employee of the restaurant",
+                "false": "%x% isn't an employee at the restaurant"
+            },
+            "shy": {
+                "true": "%x% is shy",
+                "false": "%x% isn't shy"
+            },
+            "jerk": {
+                "true": "%x% is a jerk",
+                "false": "%x% isn't a jerk"
+            },
+            "punctual": {
+                "true": "%x% is punctual",
+                "false": "%x% is unpunctual"
+            },
+            "anyone": {
+                "true": "%x% is anyone",
+                "false": "%x% is not anyone"
+            }
+        },
+        "status": {
+            "hangry": {
+                "true": "%x% is a loyal person",
+                "false": "%x% isn't a loyal person"
+            },
+            "fan_of_restaurant": {
+                "true": "%x% is a fan of this restaurant",
+                "false": "%x% isn't a fan of this restaurant"
+            },
+            "on_break": {
+                "true": "%x% is on a break",
+                "false": "%x% isn't on a break"
+            }
+        },
+        "directedStatus": {
+            "boss_of": {
+                "true": "%x% is %y%'s boss",
+                "false": "%x% isn't %y%'s boss"
+            }
+        },
+        "history": {
+            "was_nice_to": {
+                "true": "%x% was nice to %y%",
+                "false": "%x% has not been nice to %y%"
+            },
+            "was_mean_to": {
+                "true": "%x% was mean toward %y%",
+                "false": "%x% has not been mean toward %y%"
+            },
+            "was_rude_to": {
+                "true": "%x% was rude to %y%",
+                "false": "%x% has not been rude to %y%"
+            },
+            "flirted_with": {
+                "true": "%x% flirted with %y%",
+                "false": "%x% has not flirted with %y%"
+            },
+            "embarrassed_self": {
+                "true": "%x% embarrassed themself in front of %y%",
+                "false": "%x% has not embarrassed themself in front of %y%"
+            }
+        }
+    }
+}
