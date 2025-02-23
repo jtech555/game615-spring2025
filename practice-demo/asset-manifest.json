@@ -1,21 +1,14 @@
 {
   "files": {
     "main.css": "/game615-spring2025/practice-demo/static/css/main.af39015a.css",
-    "main.js": "/game615-spring2025/practice-demo/static/js/main.bd1ffd60.js",
-    "static/js/952.55a70dd5.chunk.js": "/game615-spring2025/practice-demo/static/js/952.55a70dd5.chunk.js",
-    "static/js/0.dd44ab9e.chunk.js": "/game615-spring2025/practice-demo/static/js/0.dd44ab9e.chunk.js",
-    "static/js/349.63bb2e6d.chunk.js": "/game615-spring2025/practice-demo/static/js/349.63bb2e6d.chunk.js",
-    "static/js/402.87f2f382.chunk.js": "/game615-spring2025/practice-demo/static/js/402.87f2f382.chunk.js",
-    "static/js/180.3b981a6a.chunk.js": "/game615-spring2025/practice-demo/static/js/180.3b981a6a.chunk.js",
-    "static/js/154.9d040a66.chunk.js": "/game615-spring2025/practice-demo/static/js/154.9d040a66.chunk.js",
-    "static/js/685.cd7e99d5.chunk.js": "/game615-spring2025/practice-demo/static/js/685.cd7e99d5.chunk.js",
+    "main.js": "/game615-spring2025/practice-demo/static/js/main.d2b92e6c.js",
     "static/media/logo.svg": "/game615-spring2025/practice-demo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/game615-spring2025/practice-demo/index.html",
     "main.af39015a.css.map": "/game615-spring2025/practice-demo/static/css/main.af39015a.css.map",
-    "main.bd1ffd60.js.map": "/game615-spring2025/practice-demo/static/js/main.bd1ffd60.js.map"
+    "main.d2b92e6c.js.map": "/game615-spring2025/practice-demo/static/js/main.d2b92e6c.js.map"
   },
   "entrypoints": [
     "static/css/main.af39015a.css",
-    "static/js/main.bd1ffd60.js"
+    "static/js/main.d2b92e6c.js"
   ]
 }
