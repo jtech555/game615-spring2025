@@ -42,3 +42,28 @@ Your game should be playable at the following link:
 ```
 http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-1
 ```
+
+## Platformer Progression
+
+<p align="center">
+    <picture>
+        <img src="./images/timespinner.png" width="800">
+    </picture>
+</p>
+
+*Due 3-5-25*
+
+Fundamentally, platformers involve: getting good at controlling the player's movement, collecting things, defeating enemies, exploring and finding secret locations. For this prototype, take your platformer controls (either from last week, or new ones), and create a collection of challenges/activities.
+
+As you design your prototype, you should have answers to the following questions:
+
+- *Does your game have something to get good at? What is it?*
+- *Have you made it interesting to defeat enemies in your game? How?*
+- *Does your game involve collecting stuff? How have you made this a satisfying thing to do?*
+- *Can you make the player feel clever when making a discovery?*
+
+Your game should be playable at the following link:
+
+```
+http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-2
+```
