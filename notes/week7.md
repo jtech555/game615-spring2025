@@ -34,6 +34,7 @@ People create platformer prototypes.
 
 ### Procedural Content
 - Example Spelunky
+    - [Algorithm](https://tinysubversions.com/spelunkyGen/)
 
 ## Activity
 
@@ -41,8 +42,28 @@ People create platformer prototypes.
 
 ## Technical
 
-Talk about tools to make 
+Talk about tools/techniques to help make content for platformers:
+
+- Tilemap
+- Prefabs that you can edit when the game isn't running
+    ```c#
+        [ExecuteInEditMode]
+        public class WallScript : MonoBehaviour
+        {
+            [SerializeField] private Vector3 size = Vector3.one;
+
+            public Vector3 Size
+            {
+                get => size;
+                set
+                {
+                    size = value;
+                    UpdateSize();
+                }
+            }
+    ```
+- 
 
 ## Next Week
 
-Platformer prototype part 2.
+Platformer progression
