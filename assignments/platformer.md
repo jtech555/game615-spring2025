@@ -43,28 +43,25 @@ Your game should be playable at the following link:
 http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-1
 ```
 
-## Platformer Progression
+## Final Platformer and Reflection
 
-<p align="center">
-    <picture>
-        <img src="./images/timespinner.png" width="800">
-    </picture>
-</p>
+*Due 3-19-25*
 
-*Due 3-5-25*
-
-Fundamentally, platformers involve: getting good at controlling the player's movement, collecting things, defeating enemies, exploring, and finding secret locations. For this prototype, take your platformer controls (either from last week, or new ones), and create a collection of challenges/activities.
-
-As you design your prototype, you should have answers to the following questions:
-
-- *Does your game have something to get good at? What is it?*
-- *Have you made it interesting to defeat enemies in your game? How?*
-- *Does your game involve collecting stuff? How have you made this a satisfying thing to do?*
-- *If exploration is important to your game, have are you motivating the player to do it?*
-- *Can you make the player feel clever when making a discovery?*
-
-Your game should be playable at the following link:
+First, make whatever final tweaks to your platformer you intend to make. Your final version should be playable at:
 
 ```
-http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-2
+http://<YOUR_GITHUB_USERNAME>.github.io/game-dev-spring2025/builds/platformer-final
+```
+
+Next, reflect on your experience creating the platformer prototypes. For each prototype, create a section with the folloling:
+
+- What were you experimenting with with your prototype?
+- What did you learn?
+- Include an image of each prototype
+- Include a link to each prototype
+
+The README.md should be placed in the following directory of your repository: `game-dev-spring2025/prototypes/platformer`. If you did everything right, you should see your markdown file rendered as a basic website when you go the following link:
+
+```
+https://github.com/<YOUR_GITHUB_USERNAME>/game-dev-spring2025/tree/main/prototypes/platformer
 ```
