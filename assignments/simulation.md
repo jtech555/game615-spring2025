@@ -4,11 +4,7 @@
 
 *Due 3-26-25*
 
-<p align="right">
-    <picture>
-        <img src="./images/sc2000.png" width="500">
-    </picture>
-</p>
+<img src="./images/sc2000.png" width="500" align="right">
 
 Create a grid-based simulation, where each cell in the grid has a state that evolves through input and time passing, and the state of each cell is visualized (however minimally) to the player in some way. 
 
