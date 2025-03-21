@@ -20,6 +20,7 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 2.2. [Platformer Controls - Round 1](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-controls---round-1) | 2-26-24 |
 | 2.3. [Platformer Progression](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-progression) | 3-5-25 |
 | 2.4. [Final Platformer and Reflection](https://mtreanor.com/game615-spring2025/assignments/platformer.html#final-platformer-and-reflection) | 3-19-25 |
+| 3.0. [Grid-based Simulation Part 1](https://mtreanor.com/game615-spring2025/assignments/simulation.html) | 3-26-25 |
 
 ## Examples
 
@@ -31,3 +32,4 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 2-19-25 | A Basic 2D Platformer with Custom Physics | [code](https://github.com/mtreanor/game615-spring2025/tree/main/examples/platformer/Assets/PlatformerPlayerController.cs) | [play](./prototypes/platformer-1/) |
 | 2-26-25 | A More complicated (sort of broken feeling) 3d platformer with all sorts of custom physics, wall jump/slide, and moving platforms | [code](https://github.com/mtreanor/game615-spring2025/blob/main/examples/breakout/Assets/PlayerController.cs) | [play](./prototypes/platformer-2/) |
 | 3-5-25 | The basics of creating an interactive grid | [code](https://github.com/mtreanor/game615-spring2025/blob/main/examples/simulation/Assets/GridManager.cs) | [play](./prototypes/grid-1/) |
+| 3-19-25 | Updating Cells based on neighbors, clicking on cells | [GridManager](https://github.com/mtreanor/game615-spring2025/blob/main/examples/simulation/Assets/GridManager.cs) [CellScript](https://github.com/mtreanor/game615-spring2025/blob/main/examples/simulation/Assets/CellScript.cs) | [play](./prototypes/grid-2/) |
