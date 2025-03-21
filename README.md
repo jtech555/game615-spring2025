@@ -20,7 +20,7 @@ In this course, students will produce many prototypes for 4 or 5 game genres. Di
 | 2.2. [Platformer Controls - Round 1](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-controls---round-1) | 2-26-24 |
 | 2.3. [Platformer Progression](https://mtreanor.com/game615-spring2025/assignments/platformer.html#platformer-progression) | 3-5-25 |
 | 2.4. [Final Platformer and Reflection](https://mtreanor.com/game615-spring2025/assignments/platformer.html#final-platformer-and-reflection) | 3-19-25 |
-| 3.0. [Grid-based Simulation Part 1](https://mtreanor.com/game615-spring2025/assignments/simulation.html) | 3-26-25 |
+| 3.1. [Grid-based Simulation Part 1](https://mtreanor.com/game615-spring2025/assignments/simulation.html) | 3-26-25 |
 
 ## Examples
 
