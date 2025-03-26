@@ -14,6 +14,10 @@ public class GridManager : MonoBehaviour
     [SerializeField]
     GameObject cellPrefab;
 
+    // Reference to the tree prefab
+    [SerializeField]
+    GameObject treePrefab;
+
     // UI text element to display grid coordinates
     [SerializeField]
     TMP_Text indeceseText;
@@ -44,7 +48,7 @@ public class GridManager : MonoBehaviour
 
     // The 2D array that stores all cell references
     public CellScript[,] grid;
-    
+
     // Tracks which cell the mouse is currently hovering over
     public CellScript currentHoverCell;
 
@@ -81,7 +85,8 @@ public class GridManager : MonoBehaviour
     {
         // Handle simulation timing
         nextSimulationStepTimer -= Time.deltaTime;
-        if (nextSimulationStepTimer < 0) {
+        if (nextSimulationStepTimer < 0)
+        {
             SimulationStep();
             nextSimulationStepTimer = nextSimulationStepRate;
         }
@@ -89,95 +94,111 @@ public class GridManager : MonoBehaviour
         // Handle mouse hover detection
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, float.MaxValue, LayerMask.GetMask("cell"))) {
+        if (Physics.Raycast(ray, out hit, float.MaxValue, LayerMask.GetMask("cell")))
+        {
             // Get the cell that was hit
             CellScript cs = hit.collider.gameObject.GetComponentInParent<CellScript>();
             Vector2Int gridPosition = new Vector2Int(cs.State.x, cs.State.y);
-            
+
             // Update UI with current position
             indeceseText.text = gridPosition.ToString();
-            
+
             // Reset previous hover cell's material if we've moved to a new cell
-            if (currentHoverCell != null && currentHoverCell != grid[gridPosition.x, gridPosition.y]) {
+            if (currentHoverCell != null && currentHoverCell != grid[gridPosition.x, gridPosition.y])
+            {
                 currentHoverCell.gameObject.GetComponentInChildren<Renderer>().material = defaultMaterial;
                 currentHoverCell.Unhover();
             }
-            
+
             // Update current hover cell and change its material
             currentHoverCell = grid[gridPosition.x, gridPosition.y];
             currentHoverCell.Hover();
 
-            if (Input.GetMouseButtonDown(0)) {
+            if (Input.GetMouseButtonDown(0))
+            {
                 currentHoverCell.Clicked();
             }
-            if (Input.GetMouseButtonDown(1)) {
+            if (Input.GetMouseButtonDown(1))
+            {
                 currentHoverCell.RightClicked();
             }
         }
     }
 
     // Advances the simulation by one step
-    void SimulationStep() 
+    void SimulationStep()
     {
         // Calculate the next state for all cells
         // Store all of the updated cells in a new array so that we don't "contaminate" the cells
         // in state "time" with the cells in state "time + 1".
         CellState[,] nextState = new CellState[gridW, gridH];
-        for (int x = 0; x < gridW; x++) {
-            for (int y = 0; y < gridH; y++) {
-                nextState[x,y] = grid[x,y].GenereateNextSimulationStep();
+        for (int x = 0; x < gridW; x++)
+        {
+            for (int y = 0; y < gridH; y++)
+            {
+                nextState[x, y] = grid[x, y].GenereateNextSimulationStep();
             }
         }
 
         // Apply the new states (now that we are done updating all the cells)
-        for (int x = 0; x < gridW; x++) {
-            for (int y = 0; y < gridH; y++) {
-                grid[x,y].State = nextState[x,y];
+        for (int x = 0; x < gridW; x++)
+        {
+            for (int y = 0; y < gridH; y++)
+            {
+                grid[x, y].State = nextState[x, y];
             }
         }
     }
 
     // Gets a cell state with wrapping at grid boundaries
-    public CellState GetCellStateByIndexWithWrap(int x, int y) {
+    public CellState GetCellStateByIndexWithWrap(int x, int y)
+    {
         // Wrap coordinates to stay within grid bounds
         x = (x + gridW) % gridW;
         y = (y + gridH) % gridH;
-        return grid[x,y].State;
+        return grid[x, y].State;
     }
 
     // Returns null if it is out of bounds
-    public CellState GetCellStateByIndex(int x, int y) {
-        if (x < gridW && x >= 0 && y < gridH && y >= 0) {
-            return grid[x,y].State;
+    public CellState GetCellStateByIndex(int x, int y)
+    {
+        if (x < gridW && x >= 0 && y < gridH && y >= 0)
+        {
+            return grid[x, y].State;
         }
         return null;
     }
 
     // Gets all cell states within a specified range around a center cell.
-    public List<CellState> GetCellStatesInRange(int centerX, int centerY, int rangeX, int rangeY) {
+    public List<CellState> GetCellStatesInRange(int centerX, int centerY, int rangeX, int rangeY)
+    {
         List<CellState> cellStates = new List<CellState>();
-        
+
         // Loop through all cells in the rectangular range around the center cell
-        for (int x = centerX - rangeX; x <= centerX + rangeX; x++) {
-            for (int y = centerY - rangeY; y <= centerY + rangeY; y++) {
+        for (int x = centerX - rangeX; x <= centerX + rangeX; x++)
+        {
+            for (int y = centerY - rangeY; y <= centerY + rangeY; y++)
+            {
                 // Skip cells that are outside the grid boundaries
-                if (x < 0 || x >= gridW || y < 0 || y >= gridH) {
+                if (x < 0 || x >= gridW || y < 0 || y >= gridH)
+                {
                     continue;
                 }
-                
+
                 // Skip the center cell since we only want neighbors
                 if (x == centerX && y == centerY) continue;
-                
+
                 // Add the neighbor's state to our collection
                 cellStates.Add(grid[x, y].State);
             }
         }
-        
+
         return cellStates;
     }
 
     // Converts a world position to grid indices
-    Vector2Int WorldPointToGridIndices(Vector3 worldPoint) {
+    Vector2Int WorldPointToGridIndices(Vector3 worldPoint)
+    {
         Vector2Int gridPosition = new Vector2Int();
         gridPosition.x = Mathf.FloorToInt(worldPoint.x / (cellWidth + spacing));
         gridPosition.y = Mathf.FloorToInt(worldPoint.z / (cellHeight + spacing));
@@ -185,36 +206,43 @@ public class GridManager : MonoBehaviour
     }
 
     // Creates the grid of cells
-    public void GenereateGrid() {
+    public void GenereateGrid()
+    {
         // Clear any existing cells
-        for (int i = transform.childCount-1; i >= 0; i--) {
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
             DestroyImmediate(transform.GetChild(i).gameObject);
         }
-        
+
         // Initialize the grid array
         grid = new CellScript[gridW, gridH];
-        
+
         // Create each cell in the grid
-        for (int x = 0; x < gridW; x++) {
-            for (int y = 0; y < gridH; y++) {
+        for (int x = 0; x < gridW; x++)
+        {
+            for (int y = 0; y < gridH; y++)
+            {
                 // Calculate position based on cell size and spacing
-                Vector3 pos = new Vector3((cellWidth+spacing) * x, 0, (cellHeight+spacing) * y);
-                
+                Vector3 pos = new Vector3((cellWidth + spacing) * x, 0, (cellHeight + spacing) * y);
+
                 // Instantiate the cell and get its script component
                 GameObject cell = Instantiate(cellPrefab, pos, Quaternion.identity);
                 CellScript cs = cell.GetComponent<CellScript>();
-                
+
                 // Initialize cell state with Perlin noise for height variation
-                cs.State.height = Mathf.PerlinNoise(x/15f, y/15f) * maxHeight;
+                cs.State.height = Mathf.PerlinNoise(x / 15f, y / 15f) * maxHeight;
                 cs.State.x = x;
                 cs.State.y = y;
-                
+
                 // Set cell size and parent
                 cell.transform.localScale = new Vector3(cellWidth, 1, cellHeight);
                 cell.transform.SetParent(transform);
-                
+
+                // Reference the tree prefab in the CellScript
+                cs.treePrefab = treePrefab;
+
                 // Store reference in the grid array
-                grid[x,y] = cell.GetComponent<CellScript>();
+                grid[x, y] = cell.GetComponent<CellScript>();
             }
         }
     }
